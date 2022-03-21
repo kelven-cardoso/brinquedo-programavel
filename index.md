@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Codigo de meu TCC feito a partir de um arduino UNO
 
-You can use the [editor on GitHub](https://github.com/kelven-cardoso/brinquedo-programavel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+O codigo inicia atribunindo a entrada dos botões e motores
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```
+ //Motor
+int in1=4; 
+int in2=5;
+int in3=6;
+int in4=7;
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+//Botões
+int buzzer=2; //buzer 
+int frente=8;
+int tras=3;
+int esquerda=11;
+int direita=12;
+int para=13;
+int comando=1;
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Em seguida atribuindo as variaves para definir se é entrada ou saida
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kelven-cardoso/brinquedo-programavel/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+void setup() {
+  Serial.begin(9600);
+  bt.begin(9600);
+  pinMode(in1,OUTPUT);
+  pinMode(in2,OUTPUT);
+  pinMode(in3,OUTPUT);
+  pinMode(in3,OUTPUT);
+  pinMode(frente,INPUT_PULLUP);
+  pinMode(tras,INPUT_PULLUP);
+  pinMode(esquerda,INPUT_PULLUP);
+  pinMode(direita,INPUT_PULLUP);
+  pinMode(para,INPUT_PULLUP);
+  pinMode(comando,INPUT_PULLUP);
+  pinMode(buzzer, OUTPUT); 
+}
+```
