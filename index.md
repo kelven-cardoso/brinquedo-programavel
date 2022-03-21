@@ -38,3 +38,6 @@ void setup() {
   pinMode(buzzer, OUTPUT); 
 }
 ```
+O codigo segue com a configurações dos botões e motores para fazer a movimentação do brinquedo. 
+Pode ser encontrado no repositorio: 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kelven-cardoso&repo=brinquedo-programavel&theme=dark)](https://github.com/kelven-cardoso/brinquedo-programavel)
